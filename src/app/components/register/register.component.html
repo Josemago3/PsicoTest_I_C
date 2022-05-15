@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">
+      <b>Registro</b>
+    </div>
+    <div class="card-body p-4">
+
+      <label style="float: left;">Nombre</label>
+      <input class="form-control m-2" type="text" placeholder="ingrese su nombre completo" minlength="12"
+        [(ngModel)]="usuario.nombre" #name="ngModel" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-warning" style="padding:0%; margin-bottom:0%;">
+        <div *ngIf="name.errors?.['required']">
+          El nombre es requerido.
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+          El nombre debe de conterner 12 como minimo caracteres.
+        </div>
+      </div>
+
+      <label style="float: left;">Email</label>
+      <input class="form-control m-2" type="email" placeholder="ingrese su email" minlength="10"
+        [(ngModel)]="usuario.email" #correo="ngModel" required>
+      <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-warning"
+        style="padding:0%; margin-bottom:0%;">
+        <div *ngIf="correo.errors?.['required']">
+          El correo es requerido.
+        </div>
+        <div *ngIf="correo.errors?.['minlength']">
+          El correo debe de conterner 10 como minimo caracteres.
+        </div>
+      </div>  
+
+      <label style="float: left;">Password</label>
+      <input class="form-control m-2" type="password" placeholder="ingrese su password" minlength="8"
+        [(ngModel)]="usuario.password" #password="ngModel" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-warning" style="padding:0%; margin-bottom:0%;">
+        <div *ngIf="password.errors?.['required']">
+          La contraseña es requerida.
+        </div>
+        <div *ngIf="password.errors?.['minlength']">
+          La contraseña debe de conterner 8 como minimo caracteres.
+        </div>
+      </div>
+
+      <label style="float: left;">Confimar Password</label>
+      <input class="form-control m-2" type="password" placeholder="confimer su password" minlength="8"
+        [(ngModel)]="usuario.passwordConfirm" #passwordConfirm="ngModel" required>
+      <div *ngIf="passwordConfirm.invalid && (passwordConfirm.dirty || passwordConfirm.touched)" class="alert alert-warning"
+        style="padding:0%; margin-bottom:0%;">
+        <div *ngIf="passwordConfirm.errors?.['required']">
+          La contraseña es requerida.
+        </div>
+        <div *ngIf="passwordConfirm.errors?.['minlength']">
+          La contraseña debe de conterner 8 como minimo caracteres.
+        </div>
+      </div>
+
+      <button class="btn btn-primary w-100 m-2" (click)="registrarse()">Registrarse</button>
+      <label> ¿Ya tienes cuenta? <a routerLink="/login">Ingresar</a></label>
+    </div>
+  </div>
+</div>

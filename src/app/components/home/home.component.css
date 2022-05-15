@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.card{
+    background-color: unset;
+}
+
+.card-header{
+    background-color: unset;
+    border-bottom: 0ch;
+}
+
+/* .video{
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark" style="background-color: #1c8adb;">
+    <div>
+        <div *ngIf="userLogged|async as user; else Login">
+            <a class="navbar-brand" routerLink="/dashboard">
+                <img src="../../../assets/PSICOTEST.png" width="50" height="50" class="d-inline-block align-top"
+                    alt="">
+            </a>
+        </div>
+
+        <ng-template #Login>
+            <a class="navbar-brand" routerLink="/home">
+                <img src="../../../assets/PSICOTEST.png" width="50" height="50" class="d-inline-block align-top"
+                    alt="">
+            </a>
+        </ng-template>
+    </div>
+
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <div ngbDropdown class="d-inline-block" *ngIf="userLogged|async as user; else btnIngresar">
+            <button type="button" class="btn btn-outline-light" id="dropdownBasic1" ngbDropdownToggle>
+                <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                {{user.email}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem (click)="logout()">Salir</button>
+            </div>
+        </div>
+
+        <ng-template #btnIngresar>
+            <button class="btn btn-outline-light" routerLink="/login">Ingresar</button>
+        </ng-template>
+    </div>
+</nav>

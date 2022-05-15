@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="list-group">
+        <!-- <div class="list-group-item flex-column align-items-start" style="margin-bottom: 0px;padding-bottom: 25px;padding-top: 25px;">
+            <h5 class="mb-1">ID Paciente: 2050</h5>
+            <div class="d-flex w-100 justify-content-between" style="align-items: baseline;">
+                <h5 class="mb-1">José Manuel Aguirre Olvera</h5>
+                <small class="btn btn-primary" >Ver Expediente</small>
+            </div>
+        </div>
+        <br>
+        <div class="list-group-item flex-column align-items-start" style="margin-bottom: 0px;padding-bottom: 25px;padding-top: 25px;">
+            <h5 class="mb-1">ID Paciente: 2250</h5>
+            <div class="d-flex w-100 justify-content-between" style="align-items: baseline;">
+                <h5 class="mb-1">Isacc Canalizo Mendosa</h5>
+                <small class="btn btn-primary" >Ver Expediente</small>
+            </div>
+        </div>
+        <br>
+        <div class="list-group-item flex-column align-items-start" style="margin-bottom: 0px;padding-bottom: 25px;padding-top: 25px;">
+            <h5 class="mb-1">ID Paciente: 3650</h5>
+            <div class="d-flex w-100 justify-content-between" style="align-items: baseline;">
+                <h5 class="mb-1">Ariel Ortega Zitle</h5>
+                <small class="btn btn-primary" routerLink="/dashboard-expediente-paciente" (click)="verExpediente(uid)" >Ver Expediente</small>
+            </div>
+        </div>  -->
+        <div class="list-group-item flex-column align-items-start" style="margin-bottom: 0px;padding-bottom: 25px;padding-top: 25px;" *ngFor="let item of items">
+            <h5 class="mb-1">ID Paciente: 3650</h5>
+            <div class="d-flex w-100 justify-content-between" style="align-items: baseline;">
+                <h5 class="mb-1">{{item.nombre}}</h5>
+                <small class="btn btn-primary" routerLink="/dashboard-expediente-paciente" (click)="verExpediente(item)" >Ver Expediente {{item.id}}</small>
+            </div>
+        </div> 
+    </div>
+</div>
