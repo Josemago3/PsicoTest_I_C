@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
             <ng-container *ngIf="selectedList === 'Paciente'">
-                <div class="container" style="text-align: initial; margin: 0px;" data-ng-init="ngOnInit()">
+                <div class="container" style="text-align: initial; margin: 0px;">
                     <form class="row g-3">
                         <div class="col-md-4">
                             <label for="validationDefault01" class="form-label">Nombre</label>
@@ -51,22 +51,34 @@
                             <label for="validationDefault05" class="form-label">Codigo Postal</label>
                             <input type="text" class="form-control" id="validationDefault05" [(ngModel)]="paciente.cp" name="cp" required>
                         </div>
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                                 <label class="form-check-label" for="invalidCheck2">
                                     Agree to terms and conditions
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-12">
-                            <button class="btn btn-primary" (click)="actualizarusuario()" type="submit">Submit form</button>
+                            <button class="btn btn-primary" (click)="actualizarusuario()" type="submit">Guardar</button>
                         </div>
                     </form>
                 </div>
             </ng-container>
             <ng-container *ngIf="selectedList === 'Resultados' ">
-                <app-dashboard-resultados style="text-align: initial;"></app-dashboard-resultados>
+                <!-- <app-dashboard-resultados style="text-align: initial;"></app-dashboard-resultados> -->
+                <div class="container" style="margin-bottom: 65px;text-align: initial;">
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-action flex-column align-items-start" style="margin-bottom: 10px;" *ngFor="let item of resultados">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{paciente.nombre}}</h5>
+                                <small class="text-muted">{{item.fecha}}</small>
+                            </div>
+                            <p class="mb-1">Test: {{item.test}}</p>
+                            <small class="text-muted">Resultado: {{item.resultado}}</small> 
+                        </div>
+                    </div>
+                </div>
             </ng-container>
             <!-- -->
         </div>

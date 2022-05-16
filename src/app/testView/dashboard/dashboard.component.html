@@ -18,7 +18,7 @@
       
     </nav>
 </div> -->
-<div class="container">
+<div class="container" *ngIf="userLogged|async as user; else Login">
   <div class="card text-center"
     style=" width: 450px; height:433.979px;  border-bottom-left-radius: 25px; border-top-right-radius: 25px;">
     <div class="card-header">
@@ -45,10 +45,10 @@
       <h6>Elige el test a aplicar</h6>
     </div>
   </div>
-  <div class="card text-center"
+  <div class="card text-center" 
     style=" width: 450px; height:433.979px;  border-bottom-left-radius: 25px; border-top-right-radius: 25px;">
-    <div class="card-header">
-      <a class="" routerLink="/dashboard-expediente" style="align-items: center;">
+    <div class="card-header" >
+      <a class="" routerLink="/dashboard-expediente" (click)="cargarBd(user.uid)" style="align-items: center;">
         <img src="../../../assets/perfil.jpg" width="220" height="280" class="d-inline-block align-top" alt=""
           style="border-radius: 10px;border-top-right-radius: 20px;">
       </a>
@@ -72,3 +72,7 @@
     </div>
   </div>
 </div>  
+
+<ng-template #Login>
+  <div class="container"></div>
+</ng-template>

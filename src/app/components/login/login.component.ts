@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  uid: any;
   
   usuario = {
     email: '',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
     console.log(this.usuario);
     const { email, password } = this.usuario;
     this.authService.login(email, password).then(res => {
-      console.log('se registro: ', res);
+      console.log('ingreso correctamente: ', res);
+      this.authService.obteneruid(res?.user?.uid);
       //navigate extras para pasar datos de usuarios
       this.router.navigate(['/dashboard']);
 
@@ -34,7 +36,9 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.usuario;
     this.authService.loginWithGoogle(email, password).then(res => {
 
-      console.log('se registro: ', res);
+      console.log('ingreso correctamente: ', res);
+      // this.uid = res?.user?.uid;
+      this.authService.obteneruid(res?.user?.uid);
       //navigate extras para pasar datos de usuarios
       this.router.navigate(['/dashboard']);
 

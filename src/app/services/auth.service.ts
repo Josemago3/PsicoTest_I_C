@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from "firebase/compat/app";
+import { ConService } from './con.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private afauth: AngularFireAuth) { }
+  uid:any;
+
+  constructor(private afauth: AngularFireAuth, private con:ConService) { }
 
   async register(email: string, password: string) {
     try {
@@ -44,5 +47,12 @@ export class AuthService {
 
   logout(){
     this.afauth.signOut();
+  }
+  obteneruid(uid:any){
+    this.con.uid = uid;
+    console.log(this.con.uid);
+  }
+  regresaruid(){
+    return this.uid;
   }
 }

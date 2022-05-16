@@ -11,7 +11,7 @@ export class DashboardResultadosComponent implements OnInit {
   items:any;
 
   constructor(private con:ConService) { 
-    this.con.returnItems().subscribe(items => {
+    this.con.resultados().subscribe(items => {
       this.items = items;
       console.log(items);
     })

@@ -23,9 +23,10 @@ export class DashboardExpedientesComponent implements OnInit {
 
   verExpediente(item: any){
     console.log(item);
-    this.con.open.emit({
-      data: item
-    })
+    this.con.obtenerpaciente(item);
+    // this.con.open.emit({
+    //   data: item
+    // })
     // this.expediente.paciente = item;
   }
 
