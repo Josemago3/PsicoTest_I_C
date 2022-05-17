@@ -1,1 +1,53 @@
-<p>dashboard-inicio works!</p>
+<div class="container mt-5">
+        <form class="row g-3" (ngSubmit)="enviar(UserDataForm)"  #UserDataForm = "ngForm">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" ngModel>
+                <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" name="apellidos" ngModel>
+                <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="inputAddress" 
+                placeholder="1234 Calle ..  Colonia .." name="direccion" ngModel>
+                <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Municipio</label>
+                <input type="text" class="form-control" id="inputCity" name="municiopio" ngModel>
+                <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Estado</label>
+                <select id="inputState" class="form-select" name="Estado" ngModel>
+                <option selected>Elige uno ...</option>
+                <option>...</option>
+                </select>
+            </div>
+            <div class="invalid-feedback">Campo requerido</div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Código postal</label>
+                <input type="text" class="form-control" id="inputZip" name="zip" ngModel>
+            </div>
+            <div class="invalid-feedback">Campo requerido</div>
+            <div class="col-12">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="polo" ngModel>
+                <label class="form-check-label" for="gridCheck">
+                    <p class="text-muted">
+                        Acepto las <a href="#" class="text-reset">póliticas de privacidad</a>.
+                      </p>
+                </label>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+</div>
+
+<!-- <pre>{{ UserDataForm.value | json}}</pre> -->

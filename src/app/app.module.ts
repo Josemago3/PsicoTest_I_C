@@ -22,6 +22,7 @@ import { DashboardResultadosComponent } from './testView/dashboard-resultados/da
 import { DashboardExpedientesPacienteComponent } from './testView/dashboard-expedientes-paciente/dashboard-expedientes-paciente.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { PlantillaTestComponent } from './form/plantilla-test/plantilla-test.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     DashboardExpedientesComponent,
     DashboardResultadosComponent,
     DashboardExpedientesPacienteComponent,
+    PlantillaTestComponent,
   ],
   imports: [
     BrowserModule,
