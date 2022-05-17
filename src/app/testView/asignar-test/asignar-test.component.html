@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" (click)="volver()">volver</button>
+            </div>
+            <form class="row" (ngSubmit)="newTest(selectTest.value)" #selectTest = "ngForm">
+                <div class="col-md-6">
+                    <label for="inputPaciente" class="form-label">Paciente</label>
+                    <select id="inputPaciente" class="form-select" name="paciente" ngModel required>
+                        <option selected>Elige uno ...</option>
+                        <option value="jtberra@gmail.com">jtberra@gmail.com</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputTest" class="form-label">Test</label>
+                    <select id="inputTest" class="form-select" name="test" ngModel required>
+                        <option> Elige uno ...</option>
+                        <option value="test-ansiedad">Ansiedad</option>
+                        <option value="test-bipolar">Bipolaridad</option>
+                        <option value="test-estres">Estrés</option>
+                    </select>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <button type="submit" class="btn btn-primary">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

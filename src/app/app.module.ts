@@ -15,7 +15,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DashboardComponent } from './testView/dashboard/dashboard.component';
-import { DashboardConsultaComponent } from './testView/dashboard-consulta/dashboard-consulta.component';
 import { DashboardInicioComponent } from './testView/dashboard-inicio/dashboard-inicio.component';
 import { DashboardExpedientesComponent } from './testView/dashboard-expedientes/dashboard-expedientes.component';
 import { DashboardResultadosComponent } from './testView/dashboard-resultados/dashboard-resultados.component';
@@ -23,6 +22,10 @@ import { DashboardExpedientesPacienteComponent } from './testView/dashboard-expe
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { PlantillaTestComponent } from './form/plantilla-test/plantilla-test.component';
+import { AsignarTestComponent } from './testView/asignar-test/asignar-test.component';
+import { TestAnsiedadComponent } from './form/test-ansiedad/test-ansiedad.component';
+import { TestBipolarComponent } from './form/test-bipolar/test-bipolar.component';
+import { TestEstresComponent } from './form/test-estres/test-estres.component';
 
 
 @NgModule({
@@ -34,12 +37,15 @@ import { PlantillaTestComponent } from './form/plantilla-test/plantilla-test.com
     HomeComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    DashboardConsultaComponent,
     DashboardInicioComponent,
     DashboardExpedientesComponent,
     DashboardResultadosComponent,
     DashboardExpedientesPacienteComponent,
     PlantillaTestComponent,
+    AsignarTestComponent,
+    TestAnsiedadComponent,
+    TestBipolarComponent,
+    TestEstresComponent,
   ],
   imports: [
     BrowserModule,

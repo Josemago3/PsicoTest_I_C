@@ -4,7 +4,10 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { RegisterComponent } from './components/register/register.component';
-import { DashboardConsultaComponent } from './testView/dashboard-consulta/dashboard-consulta.component';
+import { TestAnsiedadComponent } from './form/test-ansiedad/test-ansiedad.component';
+import { TestBipolarComponent } from './form/test-bipolar/test-bipolar.component';
+import { TestEstresComponent } from './form/test-estres/test-estres.component';
+import { AsignarTestComponent } from './testView/asignar-test/asignar-test.component';
 import { DashboardExpedientesPacienteComponent } from './testView/dashboard-expedientes-paciente/dashboard-expedientes-paciente.component';
 import { DashboardExpedientesComponent } from './testView/dashboard-expedientes/dashboard-expedientes.component';
 import { DashboardInicioComponent } from './testView/dashboard-inicio/dashboard-inicio.component';
@@ -34,10 +37,6 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
-    path: "dashboard-consulta",
-    component:DashboardConsultaComponent
-  },
-  {
     path: "dashboard-inicio",
     component:DashboardInicioComponent
   },
@@ -54,10 +53,25 @@ const routes: Routes = [
     component:DashboardExpedientesPacienteComponent
   },
   {
+    path: "select-test",
+    component:AsignarTestComponent
+  },
+  {
+    path: "test-ansiedad",
+    component:TestAnsiedadComponent
+  },
+  {
+    path: "test-bipolar",
+    component:TestBipolarComponent
+  },
+  {
+    path: "test-estres",
+    component:TestEstresComponent
+  },
+  {
     path: "**",
     component: PageNotFoundComponent
-  },
-  
+  }
 ];
 
 @NgModule({

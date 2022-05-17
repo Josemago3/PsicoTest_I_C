@@ -2,21 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard-consulta',
-  templateUrl: './dashboard-consulta.component.html',
-  styleUrls: ['./dashboard-consulta.component.css']
+  selector: 'app-test-ansiedad',
+  templateUrl: './test-ansiedad.component.html',
+  styleUrls: ['./test-ansiedad.component.css']
 })
-export class DashboardConsultaComponent implements OnInit {
+export class TestAnsiedadComponent implements OnInit {
 
   constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
+
   evaluarTest() : void {
 
   }
   volver() : void {
-    this.route.navigate(['dashboard']);
+    this.route.navigate(['select-test']);
   } 
   
   banco = [
@@ -33,4 +34,5 @@ export class DashboardConsultaComponent implements OnInit {
       'pregunta':'Hubo un período de cuatro días consecutivos o más en el que me sentí triste, desesperada o vacía durante la mayor parte del día sin razón aparente.'
     }
   ]
+
 }
