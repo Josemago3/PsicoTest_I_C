@@ -26,6 +26,7 @@ import { AsignarTestComponent } from './testView/asignar-test/asignar-test.compo
 import { TestAnsiedadComponent } from './form/test-ansiedad/test-ansiedad.component';
 import { TestBipolarComponent } from './form/test-bipolar/test-bipolar.component';
 import { TestEstresComponent } from './form/test-estres/test-estres.component';
+import { PlantillaResultadosComponent } from './results/plantilla-resultados/plantilla-resultados.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { TestEstresComponent } from './form/test-estres/test-estres.component';
     TestAnsiedadComponent,
     TestBipolarComponent,
     TestEstresComponent,
+    PlantillaResultadosComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,24 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-plantilla-test',
   templateUrl: './plantilla-test.component.html',
   styleUrls: ['./plantilla-test.component.css']
 })
-export class PlantillaTestComponent implements OnInit {
+export class PlantillaTestComponent{
 
   @Input() label!:string
-  @Input() btn1!:string
-  @Input() btn2!:string
-  @Input() btn3!:string
+  @Input() campo!:string
+  @Input() resp1!:string
+  @Input() resp2!:string
+  @Input() resp3!:string
+
+  @Output() newItemEvent = new EventEmitter<number>();
 
   constructor() { }
 
-  ngOnInit(): void {
+  devolver(value:number) : void {
+    //console.log("valor -> ", value)
+    this.newItemEvent.emit(value);
   }
-
 }

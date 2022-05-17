@@ -5,27 +5,27 @@
             <p>{{ label }}</p>
         </div>
     </div>
-    <div class="d-flex justify-content-center">
+    <form class="d-flex justify-content-center">
         <!-- RETORNA OPCIÓN {{puntos}} -->
         <div class="btn-group" role="group" aria-label="Basic example">
             <div class="form-check p-3">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="{{ btn1 }}">
-                <label class="form-check-label" for="{{ btn1 }}">
+                <input class="form-check-input" type="radio" name="{{ campo }}" id="{{resp1}}" (change)="devolver(0)">
+                <label class="form-check-label" for="{{resp1}}">
                     No me identifico
                 </label>
             </div>
             <div class="form-check p-3">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="{{ btn2 }}">
-                <label class="form-check-label" for="{{ btn2 }}">
+                <input class="form-check-input" type="radio" name="{{ campo }}" id="{{resp2}}" (change)="devolver(1)">
+                <label class="form-check-label" for="{{resp2}}">
                     Me identifico muy poco
                 </label>
             </div>
             <div class="form-check p-3">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="{{ btn3 }}">
-                <label class="form-check-label" for="{{ btn3 }}">
+                <input class="form-check-input" type="radio" name="{{ campo }}" id="{{resp3}}" (change)="devolver(2 )">
+                <label class="form-check-label" for="{{resp3}}">
                     Me identifico 
                 </label>
             </div>
         </div>
-    </div>
+    </form>
 </div>

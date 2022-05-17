@@ -4,15 +4,21 @@
     <div class="d-flex justify-content-end mb-3">
         <button class="btn btn-primary" (click)="volver()">Volver</button>
     </div>
-            <!--    pregunta    idradio1:string  idradio2:string   idradio3:string-->
+
+    <form #evaluarTest = "ngForm" (ngSubmit)="evaluar()">
+        
         <div *ngFor="let preguntas of banco">
-            <app-plantilla-test 
-                [label] = "preguntas.pregunta" [btn1] = "'id1'" [btn2] = "'id2'" [btn3] = "'id3'"   >
-            </app-plantilla-test>
+            <app-plantilla-test [label] = "preguntas.pregunta" 
+                [campo] = "preguntas.name"
+                [resp1]="preguntas.resp1"
+                [resp2]="preguntas.resp2"
+                [resp3]="preguntas.resp3"
+                (newItemEvent)="addItem($event)"
+            ></app-plantilla-test>
         </div>
 
-    <div class="d-flex justify-content-center mt-3">
-        <button class="btn btn-success" (click)="evaluarTest()">Evaluar</button>
-    </div>
-    
+        <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-success">Evaluar</button>
+        </div>
+    </form>
 </div>

@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { TestAnsiedadComponent } from './form/test-ansiedad/test-ansiedad.component';
 import { TestBipolarComponent } from './form/test-bipolar/test-bipolar.component';
 import { TestEstresComponent } from './form/test-estres/test-estres.component';
+import { PlantillaResultadosComponent } from './results/plantilla-resultados/plantilla-resultados.component';
 import { AsignarTestComponent } from './testView/asignar-test/asignar-test.component';
 import { DashboardExpedientesPacienteComponent } from './testView/dashboard-expedientes-paciente/dashboard-expedientes-paciente.component';
 import { DashboardExpedientesComponent } from './testView/dashboard-expedientes/dashboard-expedientes.component';
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: "test-estres",
     component:TestEstresComponent
+  },
+  {
+    path : "result",
+    component: PlantillaResultadosComponent
   },
   {
     path: "**",
