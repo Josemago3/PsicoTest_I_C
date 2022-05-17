@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ConService } from 'src/app/services/con.service';
-import { DashboardExpedientesPacienteComponent } from '../dashboard-expedientes-paciente/dashboard-expedientes-paciente.component';
 
 @Component({
   selector: 'app-dashboard-expedientes',
